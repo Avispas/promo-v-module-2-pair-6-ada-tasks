@@ -41,15 +41,4 @@ const getLineThrough = ()=>{
 };
 
 getLineThrough();
- /*querySelectorAll de todos los checkbox
-   //for que recorre cada elemento del array y les añade un evento que este manejado por una función  y escribir un una clase para cada checkbox    checkBox.addEventListener('click',taskCompleted);
-   1.Que nos cambie el valor
-   2. Tiene que escuchar al checkbox de completed cuando este checkeado
-   3. Poner ID en el checkbox, para buscar en el array esa propiedad
-   
-
-
-//escribir un una clase para cada checkbox
- 
-
 
