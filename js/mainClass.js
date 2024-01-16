@@ -11,7 +11,7 @@ const tasks = [
   const taskList = document.querySelector('.task-list');
   const btnFilter = document.querySelector('.js-btn-filter');
   const inputFilter = document.querySelector('.js-text-task-filter');
-  
+  //Esto es buscar la tarea
   function handleFilter(event) {
     event.preventDefault();
     const valueInput = inputFilter.value;
@@ -21,12 +21,15 @@ const tasks = [
   }
   btnFilter.addEventListener('click', handleFilter);
   
+  
   const listenCheck = () => {
     const allCheckbox = document.querySelectorAll('.js-check');
     for (const check of allCheckbox) {
       check.addEventListener('change', handleCheck);
     }
   };
+
+  //Funcioón para taxar las tareas
   const renderTasks = (tasks) => {
     taskList.innerHTML = '';
     for (let index = 0; index < tasks.length; index++) {
