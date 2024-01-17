@@ -6,15 +6,15 @@ const inputTask = document.querySelector('.js-inputTask');
 const task = document.querySelector('.js-task');
 const ul = document.querySelector('.js-ul');
 const checkBox = document.querySelector('.js-inputTask');
-
+/*
 const tasksTest = [
     { name: 'Recoger setas en el campo', completed: false },
     { name: 'Comprar pilas', completed: true },
     { name: 'Poner una lavadora de blancos', completed: true },
     { name: 'Aprender cómo se realizan las peticiones al servidor en JavaScript', completed: false}
-];
+];*/
 
-let tasks = []
+let tasks = [];
 
 const url = 'https://dev.adalab.es/api/todo';
 
@@ -22,14 +22,13 @@ function askToServer () {
   fetch (url)
   .then ((response)=> response.json())
   .then ((data) => {
-    task = data;
-    console.log(task)
-    ul.innerHTML = 
+    console.log(data);
+    tasks = data.results;
+    renderTasks(tasks);
   })
 }
 
-
-
+askToServer();
 function handleFilter(event) {
   event.preventDefault();
   const valueInput = inputSearch.value;
